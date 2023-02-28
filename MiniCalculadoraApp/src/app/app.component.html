@@ -1,7 +1,6 @@
 <!-- Pum primera interpolación -->
-<h1>{{title}}</h1>
 <div class="container">
-
+  <h1>{{title}}</h1>
   <form action="">
   
     Numero 1: <input type="number" [(ngModel)]="numero1" name="numero1"><br/><br/>
@@ -13,7 +12,18 @@
     <input type="submit" value="Restar" (click)="restar()" class="btn btn-primary">
   
   </form>
-
+  <p>Resultado: {{resultado}} </p> 
 </div>
 
-<p>Resultado: {{resultado}} </p> 
+<div class="container">
+  <h1>{{registro}}</h1>
+  <form>
+    <input type="text" name="nombre"> <br/><br/>
+    <input type="text" name="apellido"> <br/><br/>
+
+    <input type="submit" value="Registrar" (click)="registrarUsuario()">
+  </form>
+  <p *ngIf="registrado">{{mensaje}}</p>
+</div>
+
+
